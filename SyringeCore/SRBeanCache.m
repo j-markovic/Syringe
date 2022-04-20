@@ -69,11 +69,4 @@
     return [cache objectForKey:className];
 }
 
-- (void)dealloc {
-    // dealloc my objects here
-    [cache release];
-    [super dealloc];
-}
-
-
 @end

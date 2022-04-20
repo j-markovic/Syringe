@@ -27,10 +27,6 @@
 
 - (void)scanSclasses {
 
-    if (injectableClasses) {
-        [injectableClasses release];
-    }
-
     injectableClasses= [[NSMutableArray alloc] initWithCapacity:64];
 
     int numClasses = objc_getClassList(NULL, 0);
@@ -52,14 +48,5 @@
     }
 
 }
-
-
-
-- (void)dealloc
-{
-    [injectableClasses release];
-	[super dealloc];
-}
-
 
 @end
