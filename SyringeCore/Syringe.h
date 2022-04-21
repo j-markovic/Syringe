@@ -19,6 +19,8 @@
 #import "Injectable.h"
 #import "NSObject+SyringeExtras.h"
 #import "BeanFactory.h"
+#import "SRClasspathScanner.h"
+#import "SRBeanCache.h"
 
 #define inject(X) [[BeanFactory sharedBeanFactory] getObjectOfClass:[X class]]
 
